@@ -20,7 +20,7 @@
     </script>
     <script src="js/store.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/sync.js"></script>
+    <script src="js/backup.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -39,9 +39,7 @@
                         </select>
                         <button class="btn" type="button" id="profileAdd">Add</button>
                         <button class="btn" type="button" id="profileEdit">Edit</button>
-                        <button class="btn" type="button" id="syncNow" title="Save your checkmarks online now">Sync</button>
-                        <button class="btn" type="button" id="syncSettings" title="Set up sync once">Setup Sync</button>
-                        <span id="syncStatus" class="sync-status sync-offline">Sync off</span>
+                        <button class="btn" type="button" id="backupOpen" title="Save your checkmarks to a file, or load one on another device">Backup</button>
                     </div>
                 </div>
                     
@@ -52,16 +50,6 @@
     <div class="container">
         <div id="intro">
             <h1 class="text-center">Dark Souls 2: Scholar of the First Sin Cheat Sheet</h1>
-            <p>
-                The following is a checklist and set of information I use when playing Dark Souls 2: Scholar of the First Sin to make sure I don't miss
-                an item, conversation, or boss. I hope you find it useful. A big thanks goes out to the community
-                of contributors on the <a href="http://darksouls2.wikidot.com/">Dark Souls 2 Wiki</a> where
-                some of this information is borrowed from and <a href="https://github.com/smcnabb">Stephen McNabb</a> for creating the original <a href="http://smcnabb.github.io/dark-souls-2-cheat-sheet/">Dark Souls 2 Cheat Sheet</a>. If this is your first time visiting this page please check
-                out the Help section.
-            </p>
-            <p>
-                <em>Warning: Contains Spoilers!</em>
-            </p>
 
         </div>
 
@@ -2924,17 +2912,10 @@
 
                 <h2>Credits</h2>
                 <p>
-                    I'd like to extend a HUGE thanks to <a href="https://github.com/smcnabb">Stephen McNabb</a> for creating the original 
-                    <a href="http://smcnabb.github.io/dark-souls-2-cheat-sheet/">Dark Souls 2 Cheat Sheet</a>, <a href="https://github.com/MuFeR">MuFeR</a>, 
-                    <a href="https://github.com/Rejna">Rafal Hejna</a>, and <a href="https://github.com/TheParty020">TheParty020</a> 
-                    for many SotFS additions, and <a href="https://github.com/ZKjellberg">Zachary Kjellberg</a> for the 
-                    <a href="http://zkjellberg.github.io/dark-souls-3-cheat-sheet/">Dark Souls 3 Cheat Sheet</a> 
-                    from which I borrowed some design elements. If I missed crediting someone please let me know!
-                </p>
-                <p>
-                    Furthermore, I wouldn't have made it through this with my sanity intact if it weren't for the walkthroughs from 
-                    <a href="https://www.youtube.com/channel/UC9N0DmacOi4iWKQyygX89OQ">FightinCowboy</a> and
-                    <a href="https://www.youtube.com/channel/UCZ59sO0IQRmYHQwcfC5exzw">BlueLizardJello</a>, so go stop by their channels sometime and check out their amazing content.
+                    Checklist layout based on
+                    <a href="https://github.com/xenevel/dark-souls-2-sotfs-cheat-sheet">xenevel's Dark Souls 2: Scholar of the First Sin Cheat Sheet</a>.
+                    Achievement data from the SOTFS Achievement Checklist spreadsheet by
+                    <a href="https://www.reddit.com/user/NobodyAKAOdysseus/">u/NobodyAKAOdysseus</a>.
                 </p>
 
                 <h2>Help</h2>
@@ -2959,39 +2940,15 @@
                     characters.
                 </p>
 
-                <h3>How do I help with feedback, corrections, suggestions or additions?</h3>
-                <p>
-                    You can post in <a href="https://www.reddit.com/r/DarkSouls2/comments/c1200w/complete_dark_souls_2_scholar_of_the_first_sin/?">this Reddit thread</a>
-                    or if you know your way about Git/GitHub then fork
-                    <a href="https://github.com/xenevel/dark-souls-2-sotfs-cheat-sheet">my repo</a> and
-                    submit a pull request.
-                </p>
-                <p>
-                    Thanks to the following people for their suggestions, fixes and improvements (for the original DS2 checklist)
-                    <ul>
-                        <li><a href="http://www.reddit.com/user/vScorp1o">vScorp1o</a></li>
-                        <li><a href="http://www.reddit.com/user/WaterChestnut3">WaterChestnut3</a></li>
-                        <li><a href="http://www.reddit.com/user/N4N4KI">N4N4KI</a></li>
-                        <li><a href="http://www.reddit.com/user/eightclicknine">eightclicknine</a></li>
-                        <li><a href="http://www.reddit.com/user/ravfe">ravfe</a></li>
-                        <li><a href="http://www.reddit.com/user/scalyblue">scalyblue</a></li>
-                        <li><a href="http://www.reddit.com/user/man_after_midnight">man_after_midnight</a></li>
-                        <li><a href="http://www.reddit.com/user/inertiatic_ESP">inertiatic_ESP</a></li>
-                        <li><a href="http://www.reddit.com/user/jerseymonkey">jerseymonkey</a></li>
-                        <li><a href="http://www.reddit.com/user/lehovo">lehovo</a></li>
-                        <li><a href="http://www.reddit.com/user/Shwez">Shwez</a></li>
-                    </ul>
-                </p>
-
                 <h3>How does the checklist status get saved?</h3>
                 <p>
                     Your checkmarks are saved in this browser automatically. If you clear site data they will be reset.
                 </p>
-                <h3>How do I sync checkmarks to my phone or another PC?</h3>
+                <h3>How do I move checkmarks to my phone or another PC?</h3>
                 <p>
-                    Press <strong>Setup Sync</strong> (top right) once per device and follow the 3 steps.
-                    After that just press <strong>Sync</strong>. You can also download or load a backup file
-                    from the same window under Advanced options.
+                    Press <strong>Backup</strong> (top right), then <strong>Save backup</strong>.
+                    Move the file to your other device and use <strong>Backup → Choose backup file → Replace</strong>.
+                    The file name and the preview both show the date — newest wins.
                 </p>
 
             </div>
@@ -3000,66 +2957,33 @@
 
     </div>
 
-    <div id="syncModal" class="modal fade">
+    <div id="backupModal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h3 class="modal-title">Sync checkmarks across devices</h3>
+                    <h3 class="modal-title">Backup checkmarks</h3>
                 </div>
                 <div class="modal-body">
-                    <p id="syncNotice" class="text-warning"></p>
-                    <p>Save your checkmarks online so they show up on your phone, PC, etc. Free, no server needed.</p>
-                    <p><strong>One-time setup (2 minutes):</strong></p>
-                    <ol>
-                        <li><a href="https://github.com/settings/tokens/new?scopes=gist&description=DS2%20cheat-sheet%20sync" target="_blank" rel="noopener">Get a free GitHub code</a> — tick ONLY <strong>gist</strong>, press Generate, copy the code (starts with <code>ghp_</code>). Works while the site is still local; no repo upload needed.</li>
-                        <li>Paste the code below and press <strong>Save &amp; Sync</strong>.</li>
-                        <li>On your other device, paste the <em>same</em> code and press <strong>Save &amp; Sync</strong>.</li>
-                    </ol>
-                    <p><small>Seeing “403 Resource not accessible”? Your code is missing the <strong>gist</strong> tick. Use the link above to make a Classic token with only gist checked, then paste the new code.</small></p>
-                    <div class="form-group">
-                        <label for="syncToken">Your GitHub code</label>
-                        <input type="password" id="syncToken" class="form-control" placeholder="Paste code starting with ghp_..." autocomplete="off">
-                    </div>
-                    <p><small>After setup, just press <strong>Sync</strong> at the top. Your checkmarks save automatically.</small></p>
-                    <details>
-                        <summary>Is this safe? / Advanced options</summary>
-                        <p><small>
-                            The code is stored only in this browser and sent only to GitHub over a secure connection.
-                            It can only touch private text notes (gists), not your code. Anyone with the secret link
-                            <em>could</em> read unprotected checkmarks, so add an optional password below to encrypt them.
-                            You can delete the code anytime on GitHub or with "Forget" below.
-                        </small></p>
-                        <div class="form-group">
-                            <label for="syncPassphrase">Optional password (extra privacy)</label>
-                            <input type="password" id="syncPassphrase" class="form-control" placeholder="Leave empty for basic private backup" autocomplete="off">
-                        </div>
-                        <div class="checkbox">
-                            <label><small><input type="checkbox" id="syncRememberPass"> Remember password on this device</small></label>
-                        </div>
-                        <div class="checkbox">
-                            <label><small><input type="checkbox" id="syncAuto" checked> Save automatically + load on start</small></label>
-                        </div>
-                        <div class="form-group">
-                            <label for="syncGistId"><small>Backup ID (filled in automatically — leave alone)</small></label>
-                            <input type="text" id="syncGistId" class="form-control" placeholder="Created on first sync">
-                        </div>
-                        <hr>
-                        <p>
-                            <button class="btn btn-default btn-sm" type="button" id="syncPush">Send this device online</button>
-                            <button class="btn btn-default btn-sm" type="button" id="syncPull">Load online onto this device</button>
-                        </p>
-                        <p>
-                            <button class="btn btn-default btn-sm" type="button" id="syncExport">Download backup file</button>
-                            <label class="btn btn-default btn-sm" for="syncImportFile" style="margin-bottom:0">Load backup file</label>
-                            <input type="file" id="syncImportFile" accept="application/json,.json" style="display:none">
-                        </p>
-                    </details>
+                    <p id="backupLastLine"><small>Last backup: never on this device.</small></p>
+                    <p><strong>On this device:</strong> press Save backup, keep the file (its name has the date).</p>
+                    <p><strong>On your other device:</strong> move the file over (email, Drive, USB), press Restore, pick the newest file.</p>
+                    <hr>
+                    <p>
+                        <button class="btn btn-primary" type="button" id="backupExport">Save backup</button>
+                    </p>
+                    <p>
+                        <label class="btn btn-default" for="backupImportFile" style="margin-bottom:0">Choose backup file…</label>
+                        <input type="file" id="backupImportFile" accept="application/json,.json" style="display:none">
+                    </p>
+                    <p id="backupPreview" class="text-info"></p>
+                    <p>
+                        <button class="btn btn-danger" type="button" id="backupRestore" disabled>Replace my checkmarks with this file</button>
+                    </p>
+                    <p><small>Restoring replaces everything on this device with the file. Compare dates first — newest wins.</small></p>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-danger" type="button" id="syncForget">Forget code on this device</button>
                     <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
-                    <button class="btn btn-primary" type="button" id="syncSave">Save &amp; Sync</button>
                 </div>
             </div>
         </div>

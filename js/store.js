@@ -58,9 +58,6 @@
         setProfiles: function (key, value) {
             value._updatedAt = new Date().toISOString();
             writeRaw(key, value);
-            if (global.DS2Sync && typeof global.DS2Sync.schedule === 'function') {
-                global.DS2Sync.schedule('local-change');
-            }
         }
     };
 })(window);

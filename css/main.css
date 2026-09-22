@@ -1,6 +1,5 @@
 .in_progress,
-.done,
-.sync-status {
+.done {
   color: #C60;
   border: 1px solid;
   border-radius: 3px;
@@ -11,12 +10,6 @@
   font-size: 0.9em;
 }
 .done { color: #009933; }
-
-.sync-status { margin-left: 8px; background: #fff; }
-.sync-offline { color: #777; border-color: #777; }
-.sync-ok { color: #009933; border-color: #009933; }
-.sync-pending, .sync-working { color: #C60; border-color: #C60; }
-.sync-error { color: #a94442; border-color: #a94442; }
 
 @media print {
     body { color: #000; }

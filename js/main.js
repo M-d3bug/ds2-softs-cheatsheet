@@ -17,8 +17,8 @@
         else $.jStorage.set(profilesKey, profiles);
     }
 
-    // Host API for cloud sync / import-export (see js/sync.js).
-    window.DS2SyncHost = {
+    // Host API for backup export / restore (see js/backup.js).
+    window.DS2BackupHost = {
         getProfiles: function () { return profiles; },
         applyProfiles: function (next) {
             profiles = next;
